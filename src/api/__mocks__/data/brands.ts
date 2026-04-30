@@ -3,77 +3,77 @@ import type { Brand } from '#api/types';
 const brands: Brand[] = [
   {
     slug: 'rent-a-rolls-royce-in-dubai',
-    imageSrc: '/assets/header/brands/rolls-royce.webp',
+    imageSrc: '/brands/rolls-royce.webp',
     name: 'Rolls Royce',
   },
   {
     slug: 'rent-a-lamborghini-in-dubai',
-    imageSrc: '/assets/header/brands/lamborghini.webp',
+    imageSrc: '/brands/lamborghini.webp',
     name: 'Lamborghini',
   },
   {
     slug: 'rent-a-ferrari-in-dubai',
-    imageSrc: '/assets/header/brands/ferrari.webp',
+    imageSrc: '/brands/ferrari.webp',
     name: 'Ferrari',
   },
   {
     slug: 'rent-a-mclaren-in-dubai',
-    imageSrc: '/assets/header/brands/mclaren.webp',
+    imageSrc: '/brands/mclaren.webp',
     name: 'McLaren',
   },
   {
     slug: 'rent-a-bmw-in-dubai',
-    imageSrc: '/assets/header/brands/bmw.webp',
+    imageSrc: '/brands/bmw.webp',
     name: 'BMW',
   },
   {
     slug: 'range-rover-rental-dubai',
-    imageSrc: '/assets/header/brands/range-rover.webp',
+    imageSrc: '/brands/range-rover.webp',
     name: 'Range Rover',
   },
   {
     slug: 'rent-a-maserati-in-dubai',
-    imageSrc: '/assets/header/brands/maserati.webp',
+    imageSrc: '/brands/maserati.webp',
     name: 'Maserati',
   },
   {
     slug: 'rent-a-porsche-in-dubai',
-    imageSrc: '/assets/header/brands/porsche.webp',
+    imageSrc: '/brands/porsche.webp',
     name: 'Porsche',
   },
   {
     slug: 'rent-a-audi-in-dubai',
-    imageSrc: '/assets/header/brands/audi.webp',
+    imageSrc: '/brands/audi.webp',
     name: 'Audi',
   },
   {
     slug: 'rent-a-brabus-in-dubai',
-    imageSrc: '/assets/header/brands/brabus.webp',
+    imageSrc: '/brands/brabus.webp',
     name: 'Brabus',
   },
   {
     slug: 'rent-a-gmc-in-dubai',
-    imageSrc: '/assets/header/brands/gmc.webp',
+    imageSrc: '/brands/gmc.webp',
     name: 'GMC',
   },
   {
     slug: 'rent-a-mercedes-benz-in-dubai',
-    imageSrc: '/assets/header/brands/mercedes.webp',
+    imageSrc: '/brands/mercedes.webp',
     name: 'Mercedes',
   },
   {
     slug: 'rent-a-cadillac-in-dubai',
-    imageSrc: '/assets/header/brands/cadillac.webp',
+    imageSrc: '/brands/cadillac.webp',
     name: 'Cadillac',
   },
   {
     slug: 'rent-a-aston-martin-in-dubai',
-    imageSrc: '/assets/header/brands/aston-martin.webp',
+    imageSrc: '/brands/aston-martin.webp',
     name: 'Aston Martin',
   },
   {
     slug: 'rent-a-bentley-in-dubai',
-    imageSrc: '/assets/header/brands/bentley.webp',
+    imageSrc: '/brands/bentley.webp',
     name: 'Bentley',
   },
 ];
