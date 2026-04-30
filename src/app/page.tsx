@@ -1,5 +1,5 @@
-import { Collapsible } from '@/components/ui/collapsible';
 import { Button } from '@/components/ui/button';
+import { Collapsible } from '@/components/ui/collapsible';
 
 export default function Home() {
   return (

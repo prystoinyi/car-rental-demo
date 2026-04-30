@@ -1,7 +1,7 @@
 import express from 'express';
 
-import { router } from './routes';
 import { API_ORIGIN, API_PORT } from './config';
+import { router } from './routes';
 
 const DELAY_MS = 150;
 

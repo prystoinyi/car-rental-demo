@@ -14,4 +14,4 @@ const API_ORIGIN = url.origin;
 const API_HOST = url.hostname;
 const API_PORT = Number(url.port);
 
-export { API_ORIGIN, API_HOST, API_PORT };
+export { API_HOST, API_ORIGIN, API_PORT };

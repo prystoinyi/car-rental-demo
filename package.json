@@ -31,18 +31,19 @@
   "devDependencies": {
     "@next/env": "16.2.4",
     "@stylistic/eslint-plugin": "5.10.0",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "4",
     "@types/express": "5.0.6",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/node": "20",
+    "@types/react": "19",
+    "@types/react-dom": "19",
     "concurrently": "9.2.1",
-    "eslint": "^9",
+    "eslint": "9",
     "eslint-config-next": "16.2.2",
+    "eslint-plugin-perfectionist": "5.9.0",
     "express": "5.2.1",
     "nodemon": "3.1.14",
-    "tailwindcss": "^4",
+    "tailwindcss": "4",
     "tsx": "4.21.0",
-    "typescript": "^5"
+    "typescript": "5"
   }
 }

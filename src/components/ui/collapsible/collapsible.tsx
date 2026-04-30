@@ -50,4 +50,4 @@ function CollapsibleContent({
   );
 }
 
-export { CollapsibleRoot, CollapsibleTrigger, CollapsibleContent };
+export { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger };
