@@ -1,0 +1,57 @@
+@reference "#globals.css";
+
+.root {
+  @apply card-base-interactive;
+}
+
+.trigger {
+  @apply flex w-full items-center justify-between;
+  @apply gap-4 p-4;
+  @apply cursor-pointer text-left;
+  @apply text-lg font-semibold;
+
+  @variant sm {
+    @apply p-5;
+  }
+}
+
+.triggerLabel {
+  @apply flex-1;
+}
+
+.triggerIcon {
+  @apply relative flex items-center justify-center;
+  @apply size-7 shrink-0;
+  @apply rounded-full border border-muted-border;
+  @apply bg-muted-background text-muted-foreground;
+}
+
+.triggerPlus,
+.triggerMinus {
+  @apply absolute;
+  @apply text-xl;
+  @apply transition-opacity duration-200;
+}
+
+.triggerMinus {
+  @apply opacity-0;
+}
+
+.trigger[data-panel-open] .triggerPlus {
+  @apply opacity-0;
+}
+
+.trigger[data-panel-open] .triggerMinus {
+  @apply opacity-100;
+}
+
+.content {
+  @apply overflow-hidden;
+  @apply border-t border-default-divider;
+  @apply p-4;
+  @apply text-base text-default-muted-foreground;
+
+  @variant sm {
+    @apply px-5 pb-4;
+  }
+}
