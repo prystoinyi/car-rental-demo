@@ -1,4 +1,4 @@
-import { RoutePlaceholder } from "@/components/route-placeholder";
+import { RoutePlaceholder } from '@/components/route-placeholder';
 
 type LocationPageProps = {
   params: Promise<{

@@ -1,23 +1,22 @@
-import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Montserrat, Poppins } from 'next/font/google';
+
+import './globals.css';
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-montserrat',
+  subsets: ['latin'],
 });
 
 const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
-  title: "First Super Car Rental",
-  description: "Next.js rebuild in progress.",
+  title: 'Super Car Rental',
+  description: 'Next.js rebuild in progress.',
 };
 
 export default function RootLayout({
