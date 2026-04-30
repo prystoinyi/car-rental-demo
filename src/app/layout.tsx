@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${poppins.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${montserrat.variable} ${poppins.variable}`}>
       <body>{children}</body>
     </html>
   );
