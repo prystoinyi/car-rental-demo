@@ -1,4 +1,5 @@
 import { Collapsible } from '@/components/ui/collapsible';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
@@ -15,6 +16,11 @@ export default function Home() {
           <code className="w-fit rounded-full px-4 py-2 text-sm">
             /
           </code>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <Button bounce>Contact Us</Button>
+            <Button variant="primary" bounce>Book Now</Button>
+            <Button variant="dark">View Cars</Button>
+          </div>
         </div>
       </section>
 
