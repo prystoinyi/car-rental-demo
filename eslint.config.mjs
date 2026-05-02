@@ -7,19 +7,19 @@ import { stylisticConfig } from './eslint/stylistic.mjs';
 import { typescriptConfig } from './eslint/typescript.mjs';
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+    ...nextVitals,
+    ...nextTs,
 
-  stylisticConfig,
-  typescriptConfig,
-  orderingConfig,
+    stylisticConfig,
+    typescriptConfig,
+    orderingConfig,
 
-  globalIgnores([
-    '.next/**',
-    'out/**',
-    'build/**',
-    'next-env.d.ts',
-  ]),
+    globalIgnores([
+        '.next/**',
+        'out/**',
+        'build/**',
+        'next-env.d.ts',
+    ]),
 ]);
 
 export default eslintConfig;

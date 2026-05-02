@@ -5,7 +5,7 @@ loadEnvConfig(process.cwd());
 const API_URL = process.env.NEXT_PRIVATE_API_URL;
 
 if (!API_URL) {
-  throw new Error('NEXT_PRIVATE_API_URL is required');
+    throw new Error('NEXT_PRIVATE_API_URL is required');
 }
 
 const url = new URL(API_URL);

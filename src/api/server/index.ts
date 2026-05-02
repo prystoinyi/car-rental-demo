@@ -8,7 +8,7 @@ import type { ServerApi } from './types';
 export { APIRequestError } from '../_core/errors';
 
 export const api: ServerApi = {
-  brands: {
-    getAll: () => get(`${API_URL}/brands`),
-  },
+    brands: {
+        getAll: () => get(`${API_URL}/brands`),
+    },
 };

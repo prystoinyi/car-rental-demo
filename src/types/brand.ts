@@ -1,5 +1,5 @@
 export type Brand = {
-  slug: string;
-  imageSrc: string;
-  name: string;
+    slug: string;
+    imageSrc: string;
+    name: string;
 };
