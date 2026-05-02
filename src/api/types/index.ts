@@ -1,3 +1,1 @@
-import type { Brand } from './brand';
-
-export type { Brand };
+export * as Brand from './brand';

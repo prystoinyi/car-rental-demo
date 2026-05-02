@@ -1,7 +1,3 @@
-type Brand = {
-  slug: string;
-  imageSrc: string;
-  name: string;
-};
+import type { Brand } from '@/types';
 
-export type { Brand };
+export type Dto = Brand;

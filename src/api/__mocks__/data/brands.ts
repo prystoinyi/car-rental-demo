@@ -1,6 +1,6 @@
 import type { Brand } from '#api/types';
 
-const brands: Brand[] = [
+const brands: Brand.Dto[] = [
   {
     slug: 'rent-a-rolls-royce-in-dubai',
     imageSrc: '/brands/rolls-royce.webp',
