@@ -11,9 +11,9 @@ export default function Page() {
                 description="Home page"
             >
                 <div className="flex flex-wrap gap-3 pt-2">
-                    <Button bounce>Contact Us</Button>
-                    <Button variant="primary" bounce>Book Now</Button>
-                    <Button variant="dark">View Cars</Button>
+                    <Button href="/contact" bounce>Contact Us</Button>
+                    <Button color="primary" bounce>Book Now</Button>
+                    <Button href='/cars' color="dark">View Cars</Button>
                 </div>
             </RoutePlaceholder>
 
