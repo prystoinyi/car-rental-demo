@@ -1,14 +1,14 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-type CarCategoryPageProps = {
+type Props = {
     params: Promise<{
         slug: string;
     }>;
 };
 
-export default async function CarCategoryPage({
+export default async function Page({
     params,
-}: CarCategoryPageProps) {
+}: Props) {
     const { slug } = await params;
 
     return (

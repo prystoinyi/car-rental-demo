@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Collapsible } from '@/components/ui/collapsible';
 
-export default function Home() {
+export default function Page() {
     return (
         <main className="min-h-screen px-6 py-16">
             <section className="mb-12">

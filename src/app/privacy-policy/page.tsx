@@ -1,6 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function PrivacyPolicyPage() {
+export default function Page() {
     return (
         <RoutePlaceholder title="Privacy Policy" path="/privacy-policy" />
     );

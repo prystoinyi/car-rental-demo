@@ -1,18 +1,18 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-type LocationPageProps = {
+type Props = {
     params: Promise<{
         slug: string;
     }>;
 };
 
-export default async function LocationPage({ params }: LocationPageProps) {
+export default async function Page({ params }: Props) {
     const { slug } = await params;
 
     return (
         <RoutePlaceholder
             title={`Location: ${slug}`}
-            path={`/location/${slug}`}
+            path={`/locations/${slug}`}
             description="Location landing page placeholder."
         />
     );

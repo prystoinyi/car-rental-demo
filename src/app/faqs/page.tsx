@@ -1,5 +1,5 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function FaqsPage() {
+export default function Page() {
     return <RoutePlaceholder title="FAQs" path="/faqs" />;
 }

@@ -1,12 +1,12 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-type TagPageProps = {
+type Props = {
     params: Promise<{
         slug: string;
     }>;
 };
 
-export default async function TagPage({ params }: TagPageProps) {
+export default async function Page({ params }: Props) {
     const { slug } = await params;
 
     return (

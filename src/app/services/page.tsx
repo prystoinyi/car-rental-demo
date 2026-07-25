@@ -1,5 +1,5 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function ServicesPage() {
+export default function Page() {
     return <RoutePlaceholder title="Services" path="/services" />;
 }
