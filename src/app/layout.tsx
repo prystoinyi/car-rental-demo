@@ -26,7 +26,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" data-scroll-behavior="smooth" className={`${montserrat.variable} ${poppins.variable}`}>
-            <body>{children}</body>
+            <body>
+                <main>
+                    {children}
+                </main>
+            </body>
         </html>
     );
 }

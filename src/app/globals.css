@@ -179,12 +179,18 @@
 
   body {
     margin: 0;
+    min-width: 20rem;
     min-height: 100vh;
 
     background-color: var(--color-default-background);
 
     color: var(--color-default-foreground);
     font-family: var(--font-sans);
+  }
+
+  body > main {
+    padding-block: 4rem;
+    padding-inline: 1.5rem;
   }
 
   a {
