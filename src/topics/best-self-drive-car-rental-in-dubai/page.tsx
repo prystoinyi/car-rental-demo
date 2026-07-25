@@ -1,6 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function BestSelfDriveCarRentalInDubaiPage() {
+export default function Page() {
     return (
         <RoutePlaceholder
             title="Best Self Drive Car Rental In Dubai"

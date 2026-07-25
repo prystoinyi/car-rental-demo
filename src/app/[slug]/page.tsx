@@ -1,19 +1,40 @@
-import { RoutePlaceholder } from '@/components/route-placeholder';
+import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
-type RootSlugPageProps = {
+import { topics } from '@/topics';
+
+type Props = {
     params: Promise<{
         slug: string;
     }>;
 };
 
-export default async function RootSlugPage({ params }: RootSlugPageProps) {
-    const { slug } = await params;
+export async function generateStaticParams() {
+    return topics.map((topic) => ({
+        slug: topic.pathname,
+    }));
+}
 
-    return (
-        <RoutePlaceholder
-            title={`Standalone Page: ${slug}`}
-            path={`/${slug}`}
-            description="Root-level landing page or article placeholder."
-        />
-    );
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
+    const topic = topics.find((t) => t.pathname === slug);
+
+    if (!topic) {
+        return {};
+    }
+
+    return topic.metadata;
+}
+
+export default async function Page({ params }: Props) {
+    const { slug } = await params;
+    const topic = topics.find((t) => t.pathname === slug);
+
+    if (!topic) {
+        notFound();
+    }
+
+    const Component = topic.component;
+
+    return <Component />;
 }
