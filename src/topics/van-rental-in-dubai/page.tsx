@@ -1,6 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function VanRentalInDubaiPage() {
+export default function Page() {
     return (
         <RoutePlaceholder
             title="Van Rental In Dubai"

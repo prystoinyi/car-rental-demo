@@ -1,10 +1,10 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function FerrariHireDubaiPage() {
+export default function Page() {
     return (
         <RoutePlaceholder
-            title="Ferrari Hire Dubai"
-            path="/ferrari-hire-dubai"
+            title="Chauffeur Service"
+            path="/chauffeur-service"
         />
     );
 }

@@ -1,6 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function TeslaCybertruckRentalDubaiPage() {
+export default function Page() {
     return (
         <RoutePlaceholder
             title="Tesla Cybertruck Rental Dubai"

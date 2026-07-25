@@ -1,6 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function LongTermLuxuryCarRentalDubaiPage() {
+export default function Page() {
     return (
         <RoutePlaceholder
             title="Long Term Luxury Car Rental Dubai"

@@ -1,6 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 
-export default function WeeklyCarRentalInDubaiPage() {
+export default function Page() {
     return (
         <RoutePlaceholder
             title="Weekly Car Rental In Dubai"
