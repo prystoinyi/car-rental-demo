@@ -165,6 +165,15 @@
   }
 }
 
+@utility scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -175,6 +184,15 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  html[data-scroll-locked='true'] body {
+    position: fixed;
+    top: var(--scroll-lock-top, 0px);
+
+    overflow: hidden;
+
+    width: calc(100% - var(--scroll-lock-scrollbar-width, 0px));
   }
 
   body {
