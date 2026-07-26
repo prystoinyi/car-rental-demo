@@ -10,8 +10,9 @@
   },
   "scripts": {
     "api": "nodemon --watch src/api/__mocks__ --ext ts,json --exec \"tsx src/api/__mocks__/server.ts\"",
-    "next": "next dev",
+    "routes": "tsx scripts/routes.ts",
     "dev": "concurrently -k -n api,next \"pnpm:api\" \"pnpm:next\"",
+    "next": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
