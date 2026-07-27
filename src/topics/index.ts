@@ -1,3 +1,5 @@
+import type { TopicPage } from './types';
+
 import bestSelfDriveCarRentalInDubai from './best-self-drive-car-rental-in-dubai';
 import chauffeurService from './chauffeur-service';
 import cheapCarRentalInDubai from './cheap-car-rental-in-dubai';
@@ -10,7 +12,6 @@ import sportsCarHireDubai from './sports-car-hire-dubai';
 import teslaCybertruckRentalDubai from './tesla-cybertruck-rental-dubai';
 import vanRentalInDubai from './van-rental-in-dubai';
 import weeklyCarRentalInDubai from './weekly-car-rental-in-dubai';
-import type { TopicPage } from './types';
 
 export type { TopicPage } from './types';
 

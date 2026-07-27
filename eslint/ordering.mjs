@@ -1,8 +1,8 @@
 import perfectionist from 'eslint-plugin-perfectionist';
 
-const importKinds = ['default', 'wildcard', 'named', 'type'];
+const valueImportKinds = ['default', 'wildcard', 'named'];
 
-const importKindGroups = (group) => importKinds.flatMap((kind, index) => [
+const valueImportKindGroups = (group) => valueImportKinds.flatMap((kind, index) => [
     ...(index === 0 ? [] : [{ newlinesBetween: 0 }]),
     `${kind}-${group}`,
 ]);
@@ -10,7 +10,7 @@ const importKindGroups = (group) => importKinds.flatMap((kind, index) => [
 const internalImportGroups = [
     ['internal-hash', '^#'],
     ['internal-alias', '^@/'],
-].flatMap(([groupName, elementNamePattern]) => importKinds.map((kind) => ({
+].flatMap(([groupName, elementNamePattern]) => ['type', ...valueImportKinds].map((kind) => ({
     groupName: `${kind}-${groupName}`,
     selector: 'internal',
     modifiers: [kind],
@@ -58,25 +58,40 @@ const orderingConfig = {
                     'side-effect',
 
                     { newlinesBetween: 1 },
-                    ...importKindGroups('builtin'),
+                    'type-builtin',
+                    { newlinesBetween: 0 },
+                    'type-external',
+                    { newlinesBetween: 0 },
+                    'type-internal-hash',
+                    { newlinesBetween: 0 },
+                    'type-internal-alias',
+                    { newlinesBetween: 0 },
+                    'type-parent',
+                    { newlinesBetween: 0 },
+                    'type-sibling',
+                    { newlinesBetween: 0 },
+                    'type-index',
 
                     { newlinesBetween: 1 },
-                    ...importKindGroups('external'),
+                    ...valueImportKindGroups('builtin'),
 
                     { newlinesBetween: 1 },
-                    ...importKindGroups('internal-hash'),
+                    ...valueImportKindGroups('external'),
+
+                    { newlinesBetween: 1 },
+                    ...valueImportKindGroups('internal-hash'),
 
                     { newlinesBetween: 0 },
-                    ...importKindGroups('internal-alias'),
+                    ...valueImportKindGroups('internal-alias'),
 
                     { newlinesBetween: 1 },
-                    ...importKindGroups('parent'),
+                    ...valueImportKindGroups('parent'),
 
                     { newlinesBetween: 1 },
-                    ...importKindGroups('sibling'),
+                    ...valueImportKindGroups('sibling'),
 
                     { newlinesBetween: 1 },
-                    ...importKindGroups('index'),
+                    ...valueImportKindGroups('index'),
 
                     { newlinesBetween: 1 },
                     'style',

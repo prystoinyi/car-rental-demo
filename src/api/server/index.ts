@@ -1,9 +1,10 @@
 import 'server-only';
 
+import type { ServerApi } from './types';
+
 import { get } from '../_core/methods';
 
 import { API_URL } from './config';
-import type { ServerApi } from './types';
 
 export { APIRequestError } from '../_core/errors';
 

@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import { Button as ButtonPrimitive } from '@base-ui/react/button';
 import type { LinkProps } from 'next/link';
 import type { ComponentPropsWithoutRef, JSX } from 'react';
+
+import Link from 'next/link';
+import { Button as ButtonPrimitive } from '@base-ui/react/button';
 
 import { cn } from '@/lib/utils';
 
