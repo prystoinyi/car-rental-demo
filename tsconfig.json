@@ -16,6 +16,12 @@
     "plugins": [
       {
         "name": "next"
+      },
+      {
+        "name": "@jetbrains/typescript-plugin-css-modules",
+        "options": {
+          "goToDefinition": "default"
+        }
       }
     ],
     "paths": {
