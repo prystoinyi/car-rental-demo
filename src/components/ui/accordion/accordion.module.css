@@ -1,0 +1,83 @@
+@reference "#globals.css";
+
+.root {
+    @apply grid gap-4;
+    @apply box-border w-full;
+}
+
+.item {
+    @apply card-base-interactive overflow-visible;
+}
+
+.header {
+    @apply m-0 rounded-[inherit];
+}
+
+.trigger {
+    @apply flex w-full justify-between;
+    @apply gap-4 p-4;
+    @apply cursor-pointer text-left;
+    @apply rounded-[inherit];
+    @apply text-lg font-medium;
+
+    @apply transition-[border-radius] duration-75 ease-out;
+
+    &[data-panel-open] {
+        @apply rounded-b-none;
+    }
+
+    @variant sm {
+        @apply p-5;
+    }
+}
+
+.triggerIcon {
+    @apply relative flex justify-center;
+    @apply size-7 shrink-0;
+    @apply rounded-full border border-muted-border;
+    @apply bg-muted-background text-muted-foreground;
+}
+
+
+.triggerPlus,
+.triggerMinus {
+    @apply absolute text-xl;
+}
+
+.triggerPlus {
+    @apply opacity-100;
+
+    .trigger[data-panel-open] & {
+        @apply opacity-0;
+    }
+}
+
+.triggerMinus {
+    @apply opacity-0;
+
+    .trigger[data-panel-open] & {
+        @apply opacity-100;
+    }
+}
+
+.panel {
+    @apply overflow-hidden;
+    @apply border-t border-default-divider;
+    @apply text-base text-default-muted-foreground;
+
+    @apply box-border h-(--accordion-panel-height);
+    @apply transition-[height] duration-75 ease-out;
+
+    &[data-starting-style],
+    &[data-ending-style] {
+        @apply h-0;
+    }
+}
+
+.content {
+    @apply p-4;
+
+    @variant sm {
+        @apply px-5 pb-4;
+    }
+}

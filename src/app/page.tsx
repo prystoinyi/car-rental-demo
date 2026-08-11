@@ -1,4 +1,5 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
+import { Accordion } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { Collapsible } from '@/components/ui/collapsible';
 import { route } from '@/lib/navigation/route';
@@ -19,13 +20,22 @@ export default function Page() {
             </RoutePlaceholder>
 
             <section className="mt-12">
-                <Collapsible open>
-                    <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>
-                    <Collapsible.Content>
-                        Yes. Free to use for personal and commercial projects. No attribution
-                        required.
-                    </Collapsible.Content>
-                </Collapsible>
+                <Accordion multiple>
+                    <Accordion.Item>
+                        <Accordion.Trigger>Can I use this in my project?</Accordion.Trigger>
+                        <Accordion.Content>
+                            Yes. Free to use for personal and commercial projects. No attribution
+                            required.
+                        </Accordion.Content>
+                    </Accordion.Item>
+                    <Accordion.Item>
+                        <Accordion.Trigger>Can I use this in my project?</Accordion.Trigger>
+                        <Accordion.Content>
+                            Yes. Free to use for personal and commercial projects. No attribution
+                            required.
+                        </Accordion.Content>
+                    </Accordion.Item>
+                </Accordion>
                 <br/>
                 <Collapsible open>
                     <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>
