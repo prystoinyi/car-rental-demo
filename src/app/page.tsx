@@ -1,7 +1,6 @@
 import { RoutePlaceholder } from '@/components/route-placeholder';
 import { Accordion } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { Collapsible } from '@/components/ui/collapsible';
 import { route } from '@/lib/navigation/route';
 
 export default function Page() {
@@ -36,14 +35,6 @@ export default function Page() {
                         </Accordion.Content>
                     </Accordion.Item>
                 </Accordion>
-                <br/>
-                <Collapsible open>
-                    <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>
-                    <Collapsible.Content>
-                        Yes. Free to use for personal and commercial projects. No attribution
-                        required.
-                    </Collapsible.Content>
-                </Collapsible>
             </section>
         </>
     );
