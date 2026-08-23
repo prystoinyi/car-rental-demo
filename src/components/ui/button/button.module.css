@@ -1,69 +1,73 @@
 @reference "#globals.css";
 
 .root {
-  @apply inline-flex items-center justify-center;
-  @apply min-h-12 rounded-full border px-5 py-3.5;
-  @apply text-sm font-bold whitespace-nowrap;
-  @apply cursor-pointer transition-all duration-200 outline-none select-none;
+    @apply cursor-pointer select-none;
+    @apply inline-flex items-center justify-center;
+    @apply min-h-12 py-3.5 px-5 border-(--button-border) border rounded-full;
+    @apply text-sm font-bold text-(--button-foreground) whitespace-nowrap;
+    @apply bg-(--button-background) outline-none;
+    @apply transition-all duration-200;
 
-  @apply border-(--button-border) bg-(--button-background) text-(--button-foreground);
+    &:hover {
+        @apply border-(--button-hover-border);
+        @apply text-(--button-hover-foreground);
+        @apply bg-(--button-hover-background);
+    }
 
-  &:hover {
-    @apply border-(--button-hover-border) bg-(--button-hover-background) text-(--button-hover-foreground);
-  }
+    &:disabled {
+        @apply pointer-events-none;
+        @apply opacity-50;
+    }
 
-  &:disabled {
-    @apply pointer-events-none opacity-50;
-  }
-
-  &:focus-visible {
-    @apply ring-2 ring-(--button-ring);
-  }
+    &:focus-visible {
+        @apply ring-2;
+        @apply ring-(--button-ring);
+    }
 }
 
 /* Colors */
 .default {
-  --button-background: var(--color-default-background);
-  --button-foreground: var(--color-default-foreground);
-  --button-border: var(--color-default-border);
-  --button-hover-background: var(--color-default-background);
-  --button-hover-foreground: var(--color-accent-background);
-  --button-hover-border: var(--color-accent-border);
-  --button-ring: var(--color-default-ring);
+    --button-background: var(--color-default-background);
+    --button-foreground: var(--color-default-foreground);
+    --button-border: var(--color-default-border);
+    --button-hover-background: var(--color-default-background);
+    --button-hover-foreground: var(--color-accent-background);
+    --button-hover-border: var(--color-accent-border);
+    --button-ring: var(--color-default-ring);
 }
 
 .primary {
-  --button-background: var(--color-accent-background);
-  --button-foreground: var(--color-accent-foreground);
-  --button-border: var(--color-accent-background);
-  --button-hover-background: var(--color-accent-border);
-  --button-hover-foreground: var(--color-accent-foreground);
-  --button-hover-border: var(--color-accent-border);
-  --button-ring: var(--color-accent-ring);
+    --button-background: var(--color-accent-background);
+    --button-foreground: var(--color-accent-foreground);
+    --button-border: var(--color-accent-background);
+    --button-hover-background: var(--color-accent-border);
+    --button-hover-foreground: var(--color-accent-foreground);
+    --button-hover-border: var(--color-accent-border);
+    --button-ring: var(--color-accent-ring);
 }
 
 .secondary {
-  --button-background: var(--color-muted-background);
-  --button-foreground: var(--color-muted-foreground);
-  --button-border: var(--color-muted-border);
-  --button-hover-background: var(--color-muted-background);
-  --button-hover-foreground: var(--color-accent-background);
-  --button-hover-border: var(--color-accent-border);
-  --button-ring: var(--color-muted-ring);
+    --button-background: var(--color-muted-background);
+    --button-foreground: var(--color-muted-foreground);
+    --button-border: var(--color-muted-border);
+    --button-hover-background: var(--color-muted-background);
+    --button-hover-foreground: var(--color-accent-background);
+    --button-hover-border: var(--color-accent-border);
+    --button-ring: var(--color-muted-ring);
 }
 
 .dark {
-  --button-background: var(--color-inverse-background);
-  --button-foreground: var(--color-inverse-foreground);
-  --button-border: var(--color-inverse-border);
-  --button-hover-background: var(--color-accent-border);
-  --button-hover-foreground: var(--color-accent-foreground);
-  --button-hover-border: var(--color-accent-border);
-  --button-ring: var(--color-inverse-ring);
+    --button-background: var(--color-inverse-background);
+    --button-foreground: var(--color-inverse-foreground);
+    --button-border: var(--color-inverse-border);
+    --button-hover-background: var(--color-accent-border);
+    --button-hover-foreground: var(--color-accent-foreground);
+    --button-hover-border: var(--color-accent-border);
+    --button-ring: var(--color-inverse-ring);
 }
 
 .bounce {
-  &:hover {
-    @apply -translate-y-px;
-  }
+    &:hover {
+        @apply -translate-y-px;
+    }
 }
