@@ -88,6 +88,9 @@ importers:
       postcss:
         specifier: 8.5.26
         version: 8.5.26
+      postcss-functions:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.5.26)
       postcss-simple-vars:
         specifier: 7.0.1
         version: 7.0.1(postcss@8.5.26)
@@ -3026,6 +3029,11 @@ packages:
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
+
+  postcss-functions@4.0.2:
+    resolution: {integrity: sha512-htDZN6t97uW4GBXquTsz/DVaNVAHtHx5tLCALquVM2u58UwHki+RwHbANKiiI0ImA8T7Iml2MnvLUM7aGtlpqA==}
+    peerDependencies:
+      postcss: ^8.0.0
 
   postcss-load-config@3.1.4:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
@@ -6751,6 +6759,11 @@ snapshots:
       find-up: 3.0.0
 
   possible-typed-array-names@1.1.0: {}
+
+  postcss-functions@4.0.2(postcss@8.5.26):
+    dependencies:
+      postcss: 8.5.26
+      postcss-value-parser: 4.2.0
 
   postcss-load-config@3.1.4(postcss@8.5.26):
     dependencies:

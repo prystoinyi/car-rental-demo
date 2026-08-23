@@ -7,6 +7,8 @@
 
     html {
         scroll-behavior: smooth;
+        font-size: 100%;
+        font-size: calc(16px * var(--ui-scale));
     }
 
     html[data-scroll-locked='true'] body {

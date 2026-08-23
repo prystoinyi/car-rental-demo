@@ -69,9 +69,5 @@
 }
 
 .content {
-    @apply p-4;
-
-    @variant sm {
-        @apply pb-4 px-5;
-    }
+    @apply py-3.5 px-4;
 }

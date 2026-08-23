@@ -46,6 +46,7 @@
     "express": "5.2.1",
     "nodemon": "3.1.14",
     "postcss": "8.5.26",
+    "postcss-functions": "4.0.2",
     "postcss-simple-vars": "7.0.1",
     "stylelint": "17.14.1",
     "stylelint-config-clean-order": "10.0.0",

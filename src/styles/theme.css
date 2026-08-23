@@ -17,26 +17,26 @@
 
     --text-*: initial;
 
-    --text-xs: var(--font-size-xs);
-    --text-xs--line-height: var(--line-height-xs);
+    --text-xs: calc(12px * var(--text-scale));
+    --text-xs--line-height: 1.35;
 
-    --text-sm: var(--font-size-sm);
-    --text-sm--line-height: var(--line-height-sm);
+    --text-sm: calc(14px * var(--text-scale));
+    --text-sm--line-height: 1.4;
 
-    --text-md: var(--font-size-md);
-    --text-md--line-height: var(--line-height-md);
+    --text-md: calc(16px * var(--text-scale));
+    --text-md--line-height: 1.5;
 
-    --text-base: var(--font-size-md);
-    --text-base--line-height: var(--line-height-md);
+    --text-base: calc(16px * var(--text-scale));
+    --text-base--line-height: 1.5;
 
-    --text-lg: var(--font-size-lg);
-    --text-lg--line-height: var(--line-height-lg);
+    --text-lg: calc(18px * var(--text-scale));
+    --text-lg--line-height: 1.5;
 
-    --text-xl: var(--font-size-xl);
-    --text-xl--line-height: var(--line-height-xl);
+    --text-xl: calc(20px * var(--text-scale));
+    --text-xl--line-height: 1.4;
 
-    --text-2xl: var(--font-size-2xl);
-    --text-2xl--line-height: var(--line-height-2xl);
+    --text-2xl: calc(24px * var(--text-scale));
+    --text-2xl--line-height: 1.35;
 
     /* Radiuses */
     --radius-*: initial;
