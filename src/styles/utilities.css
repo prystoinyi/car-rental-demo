@@ -1,0 +1,52 @@
+@utility section-base {
+    overflow: hidden;
+
+    border: 1px solid;
+    border-color: var(--color-default-border);
+    border-radius: var(--radius-md);
+
+    color: var(--color-default-foreground);
+
+    background-color: var(--color-default-background);
+}
+
+@utility section-secondary {
+    overflow: hidden;
+
+    border: 1px solid;
+    border-color: var(--color-muted-border);
+    border-radius: var(--radius-sm);
+
+    color: var(--color-muted-foreground);
+
+    background-color: var(--color-muted-background);
+}
+
+@utility card-base {
+    @apply section-base;
+
+    box-shadow: var(--shadow-xs);
+}
+
+@utility card-base-interactive {
+    @apply card-base;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    @variant hover {
+        border-color: oklch(from var(--color-default-border) calc(l - 0.05) c h);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+@utility scrollbar-none {
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

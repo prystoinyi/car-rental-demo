@@ -1,0 +1,23 @@
+:root {
+    --type-scale:  0.95;
+
+    --font-size-xs: calc(.75rem * var(--type-scale));
+    --font-size-sm: calc(.875rem * var(--type-scale));
+    --font-size-md: calc(1rem * var(--type-scale));
+    --font-size-lg: calc(1.125rem * var(--type-scale));
+    --font-size-xl: calc(1.25rem * var(--type-scale));
+    --font-size-2xl: calc(1.375rem * var(--type-scale));
+
+    --line-height-xs: calc(1rem * var(--type-scale));
+    --line-height-sm: calc(1.25rem * var(--type-scale));
+    --line-height-md: calc(1.5rem * var(--type-scale));
+    --line-height-lg: calc(1.75rem * var(--type-scale));
+    --line-height-xl: calc(1.75rem * var(--type-scale));
+    --line-height-2xl: calc(1.875rem * var(--type-scale));
+
+    @variant sm { --type-scale: 0.975; }
+    @variant md { --type-scale: 1; }
+    @variant lg { --type-scale: 1.025; }
+    @variant xl { --type-scale: 1.05; }
+    @variant 2xl { --type-scale: 1.075; }
+}
