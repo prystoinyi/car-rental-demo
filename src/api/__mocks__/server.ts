@@ -25,8 +25,6 @@ app.use((request, response) => {
     });
 });
 
-console.log(API_PORT);
-
 const server = app.listen(API_PORT, () => {
     console.info(`[mock-api] running on ${API_ORIGIN}`);
 });
