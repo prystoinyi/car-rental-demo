@@ -11,7 +11,7 @@ export function RoutePlaceholder({
     children,
 }: Props) {
     return (
-        <section className="mx-auto flex w-full max-w-5xl flex-col gap-4 rounded-md border bg-white p-8 shadow-sm">
+        <section className="mx-auto flex w-full max-w-5xl flex-col gap-4 rounded-md border bg-default-background p-8 shadow-sm">
             <span className="text-sm uppercase tracking-[0.2em]">
                 Route Skeleton
             </span>

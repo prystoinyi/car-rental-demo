@@ -20,4 +20,7 @@
     @variant lg { --type-scale: 1.025; }
     @variant xl { --type-scale: 1.05; }
     @variant 2xl { --type-scale: 1.075; }
+
+    --min-width-app: $viewport-min;
+    --max-width-app: $viewport-max;
 }

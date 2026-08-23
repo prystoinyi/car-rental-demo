@@ -2,12 +2,12 @@
     /* Breakpoints */
     --breakpoint-*: initial;
 
-    --breakpoint-xs: 30rem;
-    --breakpoint-sm: 40rem;
-    --breakpoint-md: 48rem;
-    --breakpoint-lg: 64rem;
-    --breakpoint-xl: 80rem;
-    --breakpoint-2xl: 96rem;
+    --breakpoint-xs: $breakpoint-xs;
+    --breakpoint-sm: $breakpoint-sm;
+    --breakpoint-md: $breakpoint-md;
+    --breakpoint-lg: $breakpoint-lg;
+    --breakpoint-xl: $breakpoint-xl;
+    --breakpoint-2xl: $breakpoint-2xl;
 
     /* Fonts */
     --font-*: initial;
@@ -59,40 +59,26 @@
     /* Colors */
     --color-*: initial;
 
-    /* Colors: Palette */
-    --color-white:                  #ffffff;
-    --color-black:                  #000000;
-    --color-neutral-50:             #fafafa;
-    --color-neutral-100:            #f1f1f1;
-    --color-neutral-200:            #dfdfdf;
-    --color-neutral-300:            #d7d7d7;
-    --color-neutral-600:            #4f4f4f;
-    --color-neutral-950:            #111111;
-
-    --color-brand-500:              #d0ad65;
-    --color-brand-600:              #ba934c;
-    --color-brand-500-alpha-50:       oklch(from var(--color-brand-500) l c h / 0.5);
-
     /* Colors: Semantic */
-    --color-default-background:         var(--color-white);
-    --color-default-foreground:         var(--color-black);
-    --color-default-muted-foreground:   var(--color-neutral-600);
-    --color-default-border:             var(--color-neutral-200);
-    --color-default-divider:            var(--color-neutral-100);
-    --color-default-ring:               var(--color-brand-500-alpha-50);
+    --color-default-background:         $color-white;
+    --color-default-foreground:         $color-black;
+    --color-default-muted-foreground:   $color-neutral-600;
+    --color-default-border:             $color-neutral-200;
+    --color-default-divider:            $color-neutral-100;
+    --color-default-ring:               oklch(from $color-brand-500 l c h / 0.5);
 
-    --color-accent-background:          var(--color-brand-500);
-    --color-accent-foreground:          var(--color-white);
-    --color-accent-border:              var(--color-brand-600);
-    --color-accent-ring:                var(--color-brand-500-alpha-50);
+    --color-accent-background:          $color-brand-500;
+    --color-accent-foreground:          $color-white;
+    --color-accent-border:              $color-brand-600;
+    --color-accent-ring:                oklch(from $color-brand-500 l c h / 0.5);
 
-    --color-muted-background:           var(--color-neutral-50);
-    --color-muted-foreground:           var(--color-black);
-    --color-muted-border:               var(--color-neutral-300);
-    --color-muted-ring:                 var(--color-brand-500-alpha-50);
+    --color-muted-background:           $color-neutral-50;
+    --color-muted-foreground:           $color-black;
+    --color-muted-border:               $color-neutral-300;
+    --color-muted-ring:                 oklch(from $color-brand-500 l c h / 0.5);
 
-    --color-inverse-background:         var(--color-neutral-950);
-    --color-inverse-foreground:         var(--color-white);
-    --color-inverse-border:             var(--color-neutral-950);
-    --color-inverse-ring:               oklch(from var(--color-neutral-950) l c h / 0.5);
+    --color-inverse-background:         $color-neutral-950;
+    --color-inverse-foreground:         $color-white;
+    --color-inverse-border:             $color-neutral-950;
+    --color-inverse-ring:               oklch(from $color-neutral-950 l c h / 0.5);
 }
