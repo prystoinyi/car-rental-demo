@@ -2,7 +2,7 @@ import type { LinkProps } from 'next/link';
 import type { ComponentPropsWithoutRef, JSX } from 'react';
 
 import Link from 'next/link';
-import { Button as ButtonPrimitive } from '@base-ui/react/button';
+import { Button } from '@base-ui/react/button';
 
 import { cn } from '@/lib/utils';
 
@@ -18,15 +18,15 @@ type ButtonStyleProps = {
     className?: string;
 };
 
-type ButtonProps = Omit<ButtonPrimitive.Props, 'className' | 'color'> & ButtonStyleProps;
+type ButtonProps = Omit<Button.Props, 'className' | 'color'> & ButtonStyleProps;
 
 type ButtonLinkProps<R extends string> = LinkProps<R>
     & Omit<ComponentPropsWithoutRef<'a'>, keyof LinkProps<R>>
     & ButtonStyleProps;
 
-function Button(props: ButtonProps): JSX.Element;
-function Button<R extends string>(props: ButtonLinkProps<R>): JSX.Element;
-function Button(props: ButtonProps | ButtonLinkProps<any>) {
+function ButtonImpl(props: ButtonProps): JSX.Element;
+function ButtonImpl<R extends string>(props: ButtonLinkProps<R>): JSX.Element;
+function ButtonImpl(props: ButtonProps | ButtonLinkProps<any>) {
     const {
         className,
         variant = 'default',
@@ -51,7 +51,7 @@ function Button(props: ButtonProps | ButtonLinkProps<any>) {
     }
 
     return (
-        <ButtonPrimitive
+        <Button
             data-slot="button"
             data-button-element="button"
             className={classes}
@@ -60,4 +60,4 @@ function Button(props: ButtonProps | ButtonLinkProps<any>) {
     );
 }
 
-export { Button };
+export { ButtonImpl as Button };

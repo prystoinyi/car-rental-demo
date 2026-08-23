@@ -1,12 +1,12 @@
 import {
-    CollapsibleContent,
+    CollapsiblePanel,
     CollapsibleRoot,
     CollapsibleTrigger,
 } from './collapsible';
 
 const Collapsible = Object.assign(CollapsibleRoot, {
     Trigger: CollapsibleTrigger,
-    Content: CollapsibleContent,
+    Content: CollapsiblePanel,
 });
 
 export { Collapsible };
