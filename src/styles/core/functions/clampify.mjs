@@ -11,8 +11,8 @@ const ALLOWED_VIEWPORT_UNITS = new Set(['', 'px']);
 const INVALID_RESULT = 'clamp()';
 
 export function clampify(variables) {
-    const defaultMinViewport = variables['$breakpoint-2xs'];
-    const defaultMaxViewport = variables['$breakpoint-2xl'];
+    const defaultMinViewport = variables['$content-min'];
+    const defaultMaxViewport = variables['$content-max'];
 
     return (...args) => {
         if (args.length !== 2 && args.length !== 4) {

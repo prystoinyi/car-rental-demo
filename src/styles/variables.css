@@ -2,8 +2,8 @@
     --ui-scale: clampify(1, 1.375);
     --text-scale: clampify(1, 1.125);
 
-    --min-width-app: $viewport-min;
-    --max-width-app: $viewport-max;
+    --content-min-width: $content-min;
+    --content-max-width: $content-max;
 
-    --header-min-height: clampify(80px, 90px, $viewport-min, $breakpoint-md);
+    --desktop-breakpoint: $breakpoint-desktop;
 }

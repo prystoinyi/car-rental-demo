@@ -5,6 +5,7 @@
     --breakpoint-xs: $breakpoint-xs;
     --breakpoint-sm: $breakpoint-sm;
     --breakpoint-md: $breakpoint-md;
+    --breakpoint-desktop: $breakpoint-desktop;
     --breakpoint-lg: $breakpoint-lg;
     --breakpoint-xl: $breakpoint-xl;
     --breakpoint-2xl: $breakpoint-2xl;
@@ -46,6 +47,9 @@
     --radius-md: 1rem;
     --radius-lg: 1.25rem;
     --radius-xl: 1.5rem;
+
+    /* Container */
+    --container-content: $content-max;
 
     /* Shadows */
     --shadow-*: initial;
