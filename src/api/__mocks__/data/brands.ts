@@ -46,6 +46,10 @@ const brands: Brand.Dto[] = [
         name: 'GMC',
     },
     {
+        slug: 'tesla',
+        name: 'Tesla',
+    },
+    {
         slug: 'mercedes',
         name: 'Mercedes',
     },
