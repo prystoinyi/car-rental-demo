@@ -22,5 +22,10 @@ export const api: ServerApi = {
                 imageSrc: v.imageSrc || brand.get(v.slug),
             }));
         },
+        getBySlug: async (slug: string) => {
+            const brand = await get<Brand.Dto | undefined>(`${API_URL}/brands/${slug}`);
+
+            return brand || null;
+        },
     },
 };
