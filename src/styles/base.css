@@ -3,6 +3,15 @@
         box-sizing: border-box;
         border-color: var(--color-default-border);
         outline-color: var(--color-default-ring);
+
+        &:focus-visible {
+            border-radius: 0.1rem;
+
+            outline-color: var(--color-default-ring);
+            outline-style: solid;
+            outline-width: 2px;
+            outline-offset: 0px;
+        }
     }
 
     html {
