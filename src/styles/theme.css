@@ -63,8 +63,11 @@
     /* Colors */
     --color-*: initial;
 
+    /* TODO: Rework the color system.
+     * Keep the palette as the source of truth and minimize semantic color tokens
+     * to only the roles that are actually needed. */
     /* Colors: Semantic */
-    --color-default-background:         $color-white;
+    --color-default-background:         $color-neutral-50;
     --color-default-foreground:         $color-black;
     --color-default-muted-foreground:   $color-neutral-600;
     --color-default-border:             $color-neutral-200;
@@ -72,7 +75,7 @@
     --color-default-ring:               oklch(from $color-brand-500 l c h / 0.5);
 
     --color-accent-background:          $color-brand-500;
-    --color-accent-foreground:          $color-white;
+    --color-accent-foreground:          $color-neutral-50;
     --color-accent-border:              $color-brand-600;
     --color-accent-ring:                oklch(from $color-brand-500 l c h / 0.5);
 
@@ -82,7 +85,7 @@
     --color-muted-ring:                 oklch(from $color-brand-500 l c h / 0.5);
 
     --color-inverse-background:         $color-neutral-950;
-    --color-inverse-foreground:         $color-white;
+    --color-inverse-foreground:         $color-neutral-50;
     --color-inverse-border:             $color-neutral-950;
     --color-inverse-ring:               oklch(from $color-neutral-950 l c h / 0.5);
 }

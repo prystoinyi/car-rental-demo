@@ -13,7 +13,7 @@ type Props = React.PropsWithChildren<{
 export function RoutePlaceholder({
     title,
     path,
-    description = 'Content migration placeholder',
+    description,
     children,
 }: Props) {
     const [animationDelay] = useState(getAnimationDelay);
@@ -31,12 +31,14 @@ export function RoutePlaceholder({
                     Route Skeleton
                 </span>
                 <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
-                <p className="max-w-2xl text-base leading-7">
-                    {description}
-                </p>
-                <code className="w-fit rounded-full px-4 py-2 text-sm">
-                    {path}
-                </code>
+                <div>
+                    <p className="max-w-2xl text-base leading-7">
+                        {description}
+                    </p>
+                    <code className="w-fit rounded-full px-4 py-2 text-sm">
+                        {path}
+                    </code>
+                </div>
                 {children}
             </section>
 
