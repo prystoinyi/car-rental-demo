@@ -1,5 +1,5 @@
 import type { LinkProps } from 'next/link';
-import type { ComponentPropsWithoutRef, JSX } from 'react';
+import type { ComponentPropsWithoutRef, JSX, ReactNode } from 'react';
 
 import Link from 'next/link';
 import { Button } from '@base-ui/react/button';
@@ -18,11 +18,20 @@ type ButtonStyleProps = {
     className?: string;
 };
 
-type ButtonProps = Omit<Button.Props, 'className' | 'color'> & ButtonStyleProps;
+type ButtonContent = {
+    text: string;
+    children?: never;
+} | {
+    text?: never;
+    children?: ReactNode;
+};
+
+type ButtonProps = Omit<Button.Props, 'children' | 'className' | 'color'> & ButtonStyleProps & ButtonContent;
 
 type ButtonLinkProps<R extends string> = LinkProps<R>
-    & Omit<ComponentPropsWithoutRef<'a'>, keyof LinkProps<R>>
-    & ButtonStyleProps;
+    & Omit<ComponentPropsWithoutRef<'a'>, keyof LinkProps<R> | 'children'>
+    & ButtonStyleProps
+    & ButtonContent;
 
 function ButtonImpl(props: ButtonProps): JSX.Element;
 function ButtonImpl<R extends string>(props: ButtonLinkProps<R>): JSX.Element;
@@ -32,8 +41,12 @@ function ButtonImpl(props: ButtonProps | ButtonLinkProps<any>) {
         variant = 'default',
         color = 'default',
         bounce = false,
+        text,
+        children,
         ...restProps
     } = props;
+
+    const content = children ?? text;
 
     const classes = variant === 'unstyled'
         ? className
@@ -46,7 +59,9 @@ function ButtonImpl(props: ButtonProps | ButtonLinkProps<any>) {
                 data-button-element="link"
                 className={classes}
                 {...restProps}
-            />
+            >
+                {content}
+            </Link>
         );
     }
 
@@ -56,7 +71,9 @@ function ButtonImpl(props: ButtonProps | ButtonLinkProps<any>) {
             data-button-element="button"
             className={classes}
             {...restProps}
-        />
+        >
+            {content}
+        </Button>
     );
 }
 

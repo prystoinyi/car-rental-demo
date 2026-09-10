@@ -3,18 +3,12 @@
 .root {
     @apply cursor-pointer select-none;
     @apply inline-flex items-center justify-center;
-    @apply min-h-12 py-3.5 px-5 border-(--button-border) border rounded-full;
-    @apply text-sm font-bold text-(--button-foreground) whitespace-nowrap;
+    @apply min-h-8 py-0 px-3 border-(--button-border) border rounded-full;
+    @apply text-sm font-medium text-(--button-foreground) whitespace-nowrap;
     @apply bg-(--button-background) outline-none;
     @apply transition-all duration-200;
 
-    &:hover {
-        @apply border-(--button-hover-border);
-        @apply text-(--button-hover-foreground);
-        @apply bg-(--button-hover-background);
-    }
-
-    &:disabled {
+    &[data-disabled] {
         @apply pointer-events-none;
         @apply opacity-50;
     }
@@ -22,6 +16,27 @@
     &:focus-visible {
         @apply ring-2;
         @apply ring-(--button-ring);
+    }
+
+    @media (hover: hover) {
+        &:is(:hover, :active):not([data-disabled]) {
+            @apply border-(--button-hover-border);
+            @apply text-(--button-hover-foreground);
+        }
+
+        &:hover:not([data-disabled]) {
+            @apply bg-(--button-hover-background);
+        }
+
+        &:active:not([data-disabled]) {
+            @apply bg-(--button-active-background);
+        }
+    }
+
+    @media not (hover: hover) {
+        &:active:not([data-disabled]) {
+            @apply bg-(--button-touch-active-background);
+        }
     }
 }
 
@@ -33,6 +48,8 @@
     --button-hover-background: var(--color-default-background);
     --button-hover-foreground: var(--color-accent-background);
     --button-hover-border: var(--color-accent-border);
+    --button-active-background: oklch(from var(--button-hover-foreground) l c h / 0.2);
+    --button-touch-active-background: oklch(from var(--button-background) calc(l - 0.1) c h);
     --button-ring: var(--color-default-ring);
 }
 
@@ -43,6 +60,8 @@
     --button-hover-background: var(--color-accent-border);
     --button-hover-foreground: var(--color-accent-foreground);
     --button-hover-border: var(--color-accent-border);
+    --button-active-background: oklch(from var(--button-hover-background) calc(l - 0.1) c h);
+    --button-touch-active-background: oklch(from var(--button-background) calc(l - 0.1) c h);
     --button-ring: var(--color-accent-ring);
 }
 
@@ -53,6 +72,8 @@
     --button-hover-background: var(--color-muted-background);
     --button-hover-foreground: var(--color-accent-background);
     --button-hover-border: var(--color-accent-border);
+    --button-active-background: oklch(from var(--button-hover-foreground) l c h / 0.3);
+    --button-touch-active-background: oklch(from var(--button-background) calc(l - 0.1) c h);
     --button-ring: var(--color-muted-ring);
 }
 
@@ -63,6 +84,8 @@
     --button-hover-background: var(--color-accent-border);
     --button-hover-foreground: var(--color-accent-foreground);
     --button-hover-border: var(--color-accent-border);
+    --button-active-background: oklch(from var(--button-hover-background) calc(l - 0.1) c h);
+    --button-touch-active-background: oklch(from var(--button-background) calc(l + 0.3) c h);
     --button-ring: var(--color-inverse-ring);
 }
 
