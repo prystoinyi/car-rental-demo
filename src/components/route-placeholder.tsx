@@ -19,20 +19,8 @@ export function RoutePlaceholder({
     const [animationDelay] = useState(getAnimationDelay);
 
     return (
-        <>
-            <style>{`
-                @keyframes brand-shift {
-                    from {
-                        filter: hue-rotate(-10deg);
-                    }
-
-                    to {
-                        filter: hue-rotate(10deg);
-                    }
-                }
-            `}</style>
-
-            <section className="relative mx-auto flex w-full max-w-5xl flex-col gap-4 rounded-md border bg-default-background p-8 shadow-sm">
+        <div>
+            <section className="relative flex w-full flex-col gap-4 rounded-md border bg-default-background p-8 shadow-sm">
                 <Icon
                     symbol="cog"
                     suppressHydrationWarning
@@ -51,7 +39,19 @@ export function RoutePlaceholder({
                 </code>
                 {children}
             </section>
-        </>
+
+            <style>{`
+                @keyframes brand-shift {
+                    from {
+                        filter: hue-rotate(-10deg);
+                    }
+
+                    to {
+                        filter: hue-rotate(10deg);
+                    }
+                }
+            `}</style>
+        </div>
     );
 }
 

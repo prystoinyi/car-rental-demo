@@ -38,9 +38,23 @@
         background-color: var(--color-default-background);
     }
 
-    body > main {
-        padding-block: 4rem;
-        padding-inline: 1.5rem;
+    body > main > div,
+    body > header > div,
+    body > footer > div {
+        padding-inline: max(
+            1.5rem,
+            calc((100% - var(--content-max-width)) / 2)
+        );
+
+        &:is(main > div) {
+            &:first-of-type {
+                padding-block-start: 2rem;
+            }
+
+            &:last-of-type {
+                padding-block-end: 2rem;
+            }
+        }
     }
 
     a {

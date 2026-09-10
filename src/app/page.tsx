@@ -20,7 +20,7 @@ export default function Page() {
                 </div>
             </RoutePlaceholder>
 
-            <section className="mt-12">
+            <div className="pt-12">
                 <Accordion multiple>
                     <Accordion.Item>
                         <Accordion.Trigger>Can I use this in my project?</Accordion.Trigger>
@@ -37,7 +37,7 @@ export default function Page() {
                         </Accordion.Content>
                     </Accordion.Item>
                 </Accordion>
-            </section>
+            </div>
         </>
     );
 }
