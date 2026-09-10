@@ -16,8 +16,8 @@
 
 .trigger {
     @apply cursor-pointer;
-    @apply flex gap-4 justify-between;
-    @apply w-full p-4 rounded-[inherit];
+    @apply flex gap-4 items-center justify-between;
+    @apply w-full p-3 rounded-[inherit];
     @apply text-lg font-medium text-left;
     @apply transition-[border-radius] ease-out duration-75;
 
@@ -28,7 +28,7 @@
 
 .triggerIcon {
     @apply relative;
-    @apply flex shrink-0 justify-center;
+    @apply flex shrink-0 items-center justify-center;
     @apply size-7 border-muted-border border rounded-full;
     @apply text-muted-foreground;
     @apply bg-muted-background;
