@@ -1,0 +1,121 @@
+@reference "#globals.css";
+
+.navigation {
+    @apply flex items-center justify-between;
+
+}
+
+.primary {
+    @apply flex items-center;
+
+    > .item:not(:last-child) {
+        @apply mr-4;
+    }
+}
+
+.secondary {
+    @apply flex items-center;
+
+    > .item:not(:first-child) {
+        @apply ml-4;
+    }
+}
+
+.navLink {
+    @apply inline-flex gap-1 items-center;
+    @apply min-h-6 px-1;
+    @apply font-display text-sm font-semibold text-inverse-foreground tracking-[0.20em];
+    @apply transition-colors duration-200;
+
+    &[data-pressed] {
+        @apply text-accent-background;
+    }
+
+    @variant hover {
+        @apply text-accent-background;
+    }
+}
+
+.navLinkIcon {
+    @apply flex items-center justify-center;
+    @apply outline-none;
+    @apply transition-transform duration-200;
+
+    &[data-popup-open] {
+        @apply rotate-180;
+    }
+
+    & > svg {
+        @apply size-3;
+    }
+}
+
+/* Allow navigation items to shrink so labels can truncate without hiding icons. */
+.primary,
+.secondary,
+.item {
+    @apply min-w-0;
+}
+
+/* Enable flex shrinking for ellipsis while keeping navigation icons visible. */
+.item {
+    .navLink {
+        @apply min-w-0 max-w-full;
+    }
+
+    .navLinkLabel {
+        @apply truncate;
+        @apply min-w-0;
+    }
+
+    .navLinkIcon {
+        @apply shrink-0;
+    }
+}
+
+.positioner {
+    @apply z-100;
+}
+
+.popup {
+    @apply relative;
+    @apply border-accent-background border rounded-[1.25rem];
+    @apply bg-default-foreground/95 shadow-xl;
+}
+
+.menuViewport {
+    @apply overflow-hidden;
+}
+
+.content {
+    @apply grid grid-cols-4 gap-y-3 gap-x-4;
+    @apply max-w-[92vw] p-5;
+}
+
+.brandLink {
+    @apply flex gap-3 items-center;
+    @apply py-2.5 px-2 rounded-sm;
+    @apply text-sm text-inverse-foreground;
+    @apply transition-all duration-200;
+
+    @variant hover {
+        @apply scale-[1.03];
+        @apply text-accent-background;
+        @apply bg-accent-background/10;
+    }
+}
+
+.brandLogo {
+    @apply flex shrink-0 items-center justify-center;
+    @apply h-6;
+}
+
+.brandLogo > img {
+    @apply w-auto h-[calc(1.5rem*var(--icon-scale,1))];
+    @apply object-contain object-center;
+}
+
+.brandName {
+    @apply truncate;
+    @apply ml-(--text-offset,0px);
+}

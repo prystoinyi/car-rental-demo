@@ -20,6 +20,7 @@ export const api: ServerApi = {
                 slug: v.slug,
                 name: v.name,
                 imageSrc: v.imageSrc || brand.get(v.slug),
+                imageSrcAlt: brand.get(`${v.slug}-alt`),
             }));
         },
         getBySlug: async (slug: string) => {

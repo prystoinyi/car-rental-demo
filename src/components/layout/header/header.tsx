@@ -1,5 +1,6 @@
 import { api } from '#api';
 
+import { DesktopHeader } from './desktop/desktop';
 import { MobileHeader } from './mobile/mobile';
 
 import css from './header.module.css';
@@ -9,6 +10,7 @@ export async function Header() {
 
     return (
         <header className={css.root}>
+            <DesktopHeader brands={brands} />
             <MobileHeader brands={brands} />
         </header>
     );

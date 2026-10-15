@@ -17,3 +17,9 @@ export const PHONE = (() => {
         display:  format(PHONE_NUMBER),
     } as const;
 })();
+
+export const SOCIAL_LINK = {
+    facebook: 'https://www.facebook.com',
+    instagram: 'https://www.instagram.com',
+    whatsapp: `https://api.whatsapp.com/send?phone=${PHONE.digits}`,
+} as const;

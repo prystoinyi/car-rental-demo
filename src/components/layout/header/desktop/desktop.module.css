@@ -1,0 +1,40 @@
+@reference "#globals.css";
+
+.desktop {
+    @apply py-4;
+}
+
+.topBar {
+    @apply grid grid-cols-[1fr_auto_1fr];
+}
+
+.socials {
+    @apply flex gap-2 justify-self-start;
+}
+
+.socialLink {
+    @apply w-6 h-6 min-h-auto px-1.5;
+    @apply text-md;
+
+    & > svg {
+        @apply w-auto h-auto;
+    }
+}
+
+.brand {
+    @apply contents;
+}
+
+.logo {
+    @apply pointer-events-none select-none;
+    @apply w-auto h-14;
+    @apply object-contain object-left;
+}
+
+.contact {
+    @apply justify-self-end;
+}
+
+.callNowBtn {
+    @apply h-6 min-h-auto;
+}
