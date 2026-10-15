@@ -6,4 +6,5 @@
     --content-max-width: $content-max;
 
     --desktop-breakpoint: $breakpoint-desktop;
+    --mobile-header-height: clampify(80px, 90px, $content-min, $breakpoint-desktop);
 }

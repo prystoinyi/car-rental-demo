@@ -1,0 +1,14 @@
+@reference "#globals.css";
+
+.root {
+    @apply relative z-99 top-0 left-0;
+    @apply bg-inverse-background;
+
+    & > [data-desktop] {
+        @apply max-desktop:hidden;
+    }
+
+    & > [data-mobile] {
+        @apply desktop:hidden;
+    }
+}

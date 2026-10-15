@@ -1,0 +1,121 @@
+@reference "#globals.css";
+
+.brandGridShell {
+    --brands-animation-duration: 175ms;
+
+    &::before,
+    &::after {
+        @apply pointer-events-none;
+        @apply sticky z-10 left-1/2 -translate-x-1/2;
+        @apply block;
+        @apply size-2 border-default-muted-foreground border-t-2 border-l-2;
+        @apply opacity-0;
+
+        content: "";
+    }
+
+    &::before {
+        @apply top-1 rotate-45;
+    }
+
+    &::after {
+        @apply bottom-1 rotate-225;
+    }
+
+    @apply scrollbar-none;
+    @apply relative;
+    @apply overflow-hidden;
+    @apply ml-8 pr-5 pl-5 py-2 border-accent-ring border-l;
+
+    &[data-open] {
+        @apply overflow-y-auto;
+
+        animation: open var(--brands-animation-duration) ease-out forwards;
+    }
+
+    &[data-closed] {
+        animation: close var(--brands-animation-duration) ease-in forwards;
+    }
+
+    &[data-open][data-scroll-up]::before,
+    &[data-open][data-scroll-down]::after {
+        @apply opacity-100;
+        @apply delay-(--brands-animation-duration);
+    }
+}
+
+@keyframes open {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    to {
+        max-height: 50vh;
+        opacity: 1;
+    }
+}
+
+@keyframes close {
+    from {
+        max-height: 50vh;
+        opacity: 1;
+    }
+
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
+.brandLink {
+    @apply translate-y-[0.5rem];
+    @apply flex gap-3 items-center justify-between;
+    @apply py-2.5 px-3;
+    @apply text-sm text-default-foreground;
+    @apply opacity-0;
+    @apply transition-colors duration-200;
+
+    @variant hover {
+        @apply text-accent-background;
+    }
+
+    [data-open] > & {
+        animation: brandLinkIn 175ms ease-out both;
+        animation-delay: calc(var(--i) * 30ms);
+    }
+}
+
+@keyframes brandLinkIn {
+    from {
+        translate: 0 0.5rem;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+.brandName {
+    @apply truncate;
+    @apply min-w-0;
+}
+
+.brandImgRoot {
+    @apply overflow-hidden inline-flex shrink-0 items-center justify-center;
+    @apply w-16 h-8;
+}
+
+.brandImgFrame {
+    @apply relative;
+    @apply overflow-hidden block;
+    @apply max-w-full h-full;
+}
+
+.brandImg {
+    @apply pointer-events-none select-none;
+    @apply w-full h-full;
+    @apply object-cover object-center;
+}

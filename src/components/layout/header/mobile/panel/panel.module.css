@@ -1,0 +1,152 @@
+@reference "#globals.css";
+
+.trigger {
+    @apply cursor-pointer;
+    @apply relative;
+    @apply flex items-center justify-center;
+    @apply size-10 ml-3;
+    @apply text-inverse-foreground;
+
+    .triggerIcon {
+        @apply size-8;
+    }
+}
+
+.backdrop {
+    --backdrop-opacity: 0.2;
+    --bleed: 3rem;
+
+    @apply fixed inset-0;
+    @apply min-h-dvh;
+    @apply opacity-[calc(var(--backdrop-opacity)*(1-var(--drawer-swipe-progress)))] bg-overlay;
+    @apply transition-opacity ease-[cubic-bezier(0.32,0.72,0,1)] duration-450;
+
+    &[data-starting-style],
+    &[data-ending-style] {
+        @apply opacity-0;
+    }
+
+    &[data-swiping] {
+        @apply duration-0;
+    }
+
+    &[data-ending-style] {
+        @apply duration-[calc(var(--drawer-swipe-strength)*400ms)];
+    }
+
+    /* iOS 26+: Ensure the backdrop covers the entire visible viewport. */
+    @supports (-webkit-touch-callout: none) {
+        @apply absolute;
+    }
+}
+
+.viewport {
+    --viewport-padding: 0px;
+
+    @apply fixed z-100 inset-0;
+    @apply flex justify-end;
+    @apply p-(--viewport-padding);
+
+    /* iOS 26+: Ensure the backdrop covers the entire visible viewport. */
+    @supports (-webkit-touch-callout: none) {
+        --viewport-padding: 0.625rem;
+    }
+}
+
+.popup {
+    --bleed: 3rem;
+    --indent: 1rem;
+
+    @apply touch-auto will-change-transform;
+    @apply translate-x-(--drawer-swipe-movement-x);
+    @apply overflow-hidden overscroll-contain;
+    @apply w-full max-w-[24rem] -mr-(--bleed) pr-[calc(var(--indent)+var(--bleed))] pb-(--indent) pl-(--indent);
+    @apply bg-default-background;
+    @apply transition-transform ease-[cubic-bezier(0.32,0.72,0,1)] duration-450;
+
+    &[data-starting-style],
+    &[data-ending-style] {
+        @apply translate-x-[calc(100%-var(--bleed)+var(--viewport-padding)+2px)];
+    }
+
+    &[data-ending-style] {
+        @apply duration-[calc(var(--drawer-swipe-strength)*400ms)];
+    }
+
+    /* iOS 26+: Ensure the backdrop covers the entire visible viewport. */
+    @supports (-webkit-touch-callout: none) {
+        --bleed: 0px;
+
+        @apply mr-0;
+    }
+}
+
+.content {
+    @apply flex flex-col;
+    @apply h-full;
+}
+
+.header {
+    @apply flex flex-none items-center justify-between;
+    @apply h-(--mobile-header-height) pr-2 py-3 border-default-divider border-b;
+}
+
+.logo {
+    @apply pointer-events-none select-none;
+    @apply w-auto min-w-[calc(var(--content-min-width)/2)] h-12;
+    @apply object-contain object-left;
+}
+
+.close {
+    @apply cursor-pointer;
+    @apply inline-flex items-center justify-center;
+    @apply size-10;
+}
+
+.closeIcon {
+    @apply size-6;
+}
+
+.links {
+    @apply overflow-x-hidden overflow-y-auto flex-1;
+    @apply w-[calc(100%+calc(2*var(--indent)))] min-h-0 -ml-(--indent);
+}
+
+.link {
+    @apply cursor-pointer;
+    @apply flex gap-4 items-center justify-between;
+    @apply w-full pl-5 py-3.5;
+    @apply text-sm font-medium text-left;
+    @apply transition-colors duration-200;
+
+    @variant hover {
+        @apply text-accent-foreground;
+        @apply bg-accent-background;
+
+        .linkIcon {
+            @apply text-accent-foreground;
+        }
+    }
+}
+
+.linkLabel {
+    @apply flex gap-3 items-center;
+    @apply min-w-0;
+}
+
+.linkIcon {
+    @apply shrink-0;
+    @apply size-5;
+    @apply text-accent-background;
+    @apply transition-colors duration-200;
+}
+
+.linkListIcon {
+    @apply shrink-0;
+    @apply size-4 mr-6;
+    @apply transition-transform ease-out duration-200;
+
+    [data-panel-open] > & {
+        @apply rotate-90;
+    }
+}

@@ -1,0 +1,36 @@
+@reference "#globals.css";
+
+.mobile {
+    @apply relative;
+    @apply flex flex-nowrap;
+    @apply h-(--mobile-header-height) py-5;
+}
+
+.brand {
+    @apply flex grow flex-nowrap items-center;
+    @apply mr-3;
+}
+
+.logo {
+    @apply pointer-events-none select-none;
+    @apply w-auto min-w-[calc(var(--content-min-width)/2)] h-12;
+    @apply object-contain object-left;
+}
+
+.controls {
+    @apply flex grow-0 flex-nowrap items-center;
+}
+
+.callNowBtn {
+    @apply h-6 min-h-auto;
+
+    .callNowBtnText {
+        @apply hidden xs:block;
+        @apply font-display font-medium;
+    }
+
+    .callNowBtnIcon {
+        @apply block xs:hidden;
+        @apply size-4.5;
+    }
+}

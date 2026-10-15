@@ -88,4 +88,6 @@
     --color-inverse-foreground:         $color-neutral-50;
     --color-inverse-border:             $color-neutral-950;
     --color-inverse-ring:               oklch(from $color-neutral-950 l c h / 0.5);
+
+    --color-overlay:                    $color-black;
 }
